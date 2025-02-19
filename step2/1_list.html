@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Tag's</title>
+</head>
+<body>
+    <!-- todo. ul>li*3[type]{번호없는목록$} -->
+    <ul>
+        <li type="circle">번호없는목록1</li>
+        <li type="disc">번호없는목록2</li>
+        <li type="square">번호없는목록3</li>
+    </ul>
+    <p>
+        ul : unoredered list(비 순차적 목록)의 약자 <br>
+        사전적 의미는 중요하지 않음 <br>
+        속성값은 circle, disc, square 등 3개가 있으나 외울 필요가 없다. (css로 없음처리) <br>
+    </p>
+    <!-- todo. ol>li*5[type]{번호있는목록$} -->
+    <ol>
+        <li type="A">번호있는목록1</li>
+        <li type="a">번호있는목록2</li>
+        <li type="I">번호있는목록3</li>
+        <li type="i">번호있는목록4</li>
+        <li type="decimal">번호있는목록5</li>
+    </ol>
+    <p>
+        ol은 ordered list의 약자이다 <br>
+        사전적 의미는 중요하지 않음 <br>
+        속성값은 A, a, I, i, decimal 등 5개가 있으나 ul가 마찬가지로 중요하지 않고 외울 필요가 없다. <br>
+    </p>
+    <!-- todo dl>dt+dd -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hyper Text Markup Language</dd>
+    </dl>
+    <p>
+        dl은 definition list의 약자이다. <br>
+        정의형 목록이며 사전적 의미는 중요하지 않음 <br>
+        ul, ol과 다르게 특별한 속성값은 없다. <br>
+        한개의 title(dt)을 기준으로 보완하는 내용의 data(dd)를 추가삽입할 때 유리하다. <br>
+        dt와 dd의 개수가 정해져 있지는 않으나, dt x 1, dd x n개 를 추천한다.
+    </p>
+    <dl>
+        <dt>한우등심 1+등급이상 300g 소고기 구이용 새우살 꽃등심 마블링 [원산지:상세설명에 표시]</dt>
+        <dd>11%</dd>
+        <dd><del>38,000원</del>33,750원</dd>
+        <dd>무료배송</dd>
+    </dl>
+</body>
+</html>
