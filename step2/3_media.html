@@ -6,6 +6,17 @@
     <title>Media Tag's</title>
 </head>
 <body>
-    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6vDLr6-Xo2I?si=REPgJ8vrqYbnLL2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!--
+        ! src, title, allow(youtube 한정) 제외 나머지는 css 처리.
+        ? width - 너비
+        ? height - 높이(하잍/헤잍X)
+        ? title - 접근성 요소 (모든 태그에 넣을 수 있는 attr이며 alt와 유사한 태그)
+        ? frameborder - attr(속성)
+        ? allow - youtube API value 설정 관련
+    -->
+    <embed src="https://www.youtube.com/embed/6vDLr6-Xo2I?si=REPgJ8vrqYbnLL2o" width="560" height="315">
+
+    <video src="../step2/videos/file_example_MP4_480_1_5MG.mp4" autoplay muted loop></video>
 </body>
 </html>
