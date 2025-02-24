@@ -17,8 +17,29 @@
     -->
     <embed src="https://www.youtube.com/embed/6vDLr6-Xo2I?si=REPgJ8vrqYbnLL2o" width="560" height="315">
 
-    <video poster="../step2/images/thumbnail.jpg" controls muted loop>
+    <video poster="../step2/images/thumbnail.jpg" controls muted loop preload="auto">
         <source src="../step2/videos/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
     </video>
+
+    <audio controls>
+        <source src="../step2/audios/file_example_MP3_700KB.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- https://file-examples.com -->
+    <!-- 
+        ! autoplay: video, audio 동일 속성값, 자동 재생
+        ! controls: video, audio 동일 속성값, 재생영역에 제어버튼을 활성화
+        ! loop: video, audio 동일 속성값, 반복 재생을 시키는 속성값
+        ! preload: video, audio 동일 속성값, 스트리밍 방식이 아닌 백그라운드 다운로드를 통해 재생(기본값 auto)
+            -> auto: 페이지 로드시 비디오를 로드 하여 즉시 재생
+            -> meta: 길이, 해상도 등만 로드하여 실제 비디오는 재생버튼을 클릭시 로드
+            -> none: 사용자가 재생 버튼을 클릭 시 로드 (controls 속성이 없으면 로드 불가능)
+        ! muted: video, audio 동일 속성값, 미디어 객체를 불러왔을때, 초기 설정을 mute 상태로 불러오는 속성값
+        ! src: video, audio 동일 속성값, 미디어 객체를 지정하는 속성값
+        ! poster: video 전용 속성값, video 객체를 불러오지 못하거나 thumbnail로 이미지(autoplay off)를 출력시키는 속성값
+        ! width, height는 video 전용 속성값, video 객체 영역의 크기를 정하는 속성값
+            -> css 권고
+        ! source: 여러 파일을 클라이언트 환경에 따라 다르게 적용할 수 있다.
+    -->
 </body>
 </html>
