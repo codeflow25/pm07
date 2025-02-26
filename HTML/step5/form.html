@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form Tag's</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <!-- 
+                서로 다른 2개의 이상의 data group이 존재할 때 물리적 공간 구분 용도로 사용
+                주변 공간 tag와 분리되는 공간을 만들고 싶을 때도 사용 가능
+            -->
+            <legend>HTML 4 Input's</legend>
+            <ul>
+                <li>
+                    <label for="userID">userID : </label>
+                    <input type="text" id="userID">
+                    <!-- 
+                        :text - 모든문자 입력가능 - 사용도 낮음
+
+                        input tag의 id는 백엔드가 직접적으로 사용하는 id이기 때문에 상호협의하에 결정
+                        상식적인 선 내에서 naming 규칙을 따라야 함
+                        ? 1. 한글, 띄어쓰기, 특수문자(일부제외) 금지 / 숫자, 대문자를 앞에 쓰는 행위 금지
+                        ? 2. 가능한 영문키워드 2개이상 조합 (programing language로 선정된 단어 사용 금지)
+                    -->
+                </li>
+                <li>
+                    <!-- label+input:password -->
+                    <label for="userPW">userPW : </label>
+                    <input type="password" id="userPW">
+                </li>
+                <li>
+                    <!-- (input:radio[name="radioGroup"]#btn_radio$+label[for="btn_radio$"]{item$})*4 -->
+                    <!-- (input:radio#btn_radio$+label{item$})*4 -->
+                    <input type="radio" name="radioGroup" id="btn_radio1">
+                    <label for="btn_radio1">item1</label>
+                    <input type="radio" name="radioGroup" id="btn_radio2" checked>
+                    <label for="btn_radio2">item2</label>
+                    <input type="radio" name="radioGroup" id="btn_radio3">
+                    <label for="btn_radio3">item3</label>
+                    <input type="radio" name="radioGroup" id="btn_radio4">
+                    <label for="btn_radio4">item4</label>
+                    <!-- 
+                        1. :radio - name을 이용하여 그룹을 생성하고 전체중 하나만 선택할 수 있는 태그
+                        2. 기본 설정 값이 필요한 경우 checked attr을 추가
+                        3. value 설정으로 전달 할 값을 넣어 둘 수 있음(data쪽에서 처리)
+                    -->
+                </li>
+                <li>
+                    <!-- (input:checkbox#btn_chk$+label[for="btn_chk$"]{item$})*4 -->
+                    <!-- (input:checkbox#btn_chk$+label{item$})*4 -->
+                    <input type="checkbox" id="btn_chk1">
+                    <label for="btn_chk">item1</label>
+                    <input type="checkbox" id="btn_chk2">
+                    <label for="btn_chk">item2</label>
+                    <input type="checkbox" id="btn_chk3">
+                    <label for="btn_chk">item3</label>
+                    <input type="checkbox" id="btn_chk4">
+                    <label for="btn_chk">item4</label>
+                    <!-- 
+                        1. :checkbox - 다중 선택을 지원
+                        2. 기본 설정 값이 필요한 경우 checked attr 추가
+                        3. value 설정으로 전달 할 값을 넣어 둘 수 있음(data 쪽에서 처리)
+                    -->
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
