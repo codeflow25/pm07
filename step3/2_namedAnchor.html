@@ -26,8 +26,8 @@
     </style>
 </head>
 <body>
-    <!-- todo (ul#menuList>li*5>a[href="page$"]{page$바로가기})+(#page${$page}*4>a[href="menuList"]{메뉴로.}) -->
-    <!-- todo ul#menuList>li*5>a[href="page$"]{page$바로가기} -->
+    <!-- todo (ul#menuList>li*5>a[href="#page$"]{page$바로가기})+(#page${$page}*4>a[href="#menuList"]{메뉴로.}) -->
+    <!-- todo ul#menuList>li*5>a[href="#page$"]{page$바로가기} -->
     <ul id="menuList">
         <li><a href="#page1">page1바로가기</a></li>
         <li><a href="#page2">page2바로가기</a></li>
@@ -36,7 +36,7 @@
         <li><a href="../step3/1_hyperlink.html#targetAnchor" target="_blank">하이퍼링크 목표지점</a></li>
     </ul>
 
-    <!-- todo #page$*4>a[href="#menuList"]{메뉴로} -->
+    <!-- todo #page${$page}*4>a[href="#menuList"]{메뉴로} -->
     <div id="page1">1page<a href="#menuList">메뉴로.</a></div>
     <div id="page2">2page<a href="#menuList">메뉴로.</a></div>
     <div id="page3">3page<a href="#menuList">메뉴로.</a></div>
