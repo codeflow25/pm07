@@ -65,6 +65,153 @@
                         3. value 설정으로 전달 할 값을 넣어 둘 수 있음(data 쪽에서 처리)
                     -->
                 </li>
+                <li>
+                    <label for="commentBox">comment :</label>
+                    <textarea id="commentBox" cols="30" rows="10"></textarea>
+                    <!-- 
+                        1. textarea는 현재 많이 사용되지 않음(edtior의 사용량 증가)
+                        2. textarea 태그 안은 공간이긴 하나, tag를 쓸 수 없음(태그로 인식되지 않고 문자로 인식되어 출력)
+                        3. 모든 공백이 그대로 표현되며(pre tag) 글꼴 변경이 자동으로 되지 않음
+                        4. resize 기능이 활성화 되면 layout이 무너지므로 css에서 제거
+                        5. 기존 cols, rows attr도 css로 대체(width, height)
+                    -->
+                </li>
+                <li>
+                    <!-- label+select>(optgroup>option*2)*2 -->
+                    <label for="selectJob">직업 선택</label>
+                    <select id="selectJob">
+                        <optgroup label="구직자">
+                            <option value="1">무직</option>
+                            <option value="2">학생</option>
+                        </optgroup>
+                        <optgroup label="재직자">
+                            <option value="3">공무원</option>
+                            <option value="4">기술직</option>
+                        </optgroup>
+                    </select>
+                    <!-- 
+                        1. select - 목록 형태의 선택항목을 제외하고 제공받는 양식
+                        2. 항목 수 만큼 option 태그도 필요
+                        3. optgroup 태그로 중간 그룹을 설정할 수 있다.
+                        단 :radio, :checkbox, select 처럼 선택으로 입력받는 tag들은 외관변경이 까다롭다.
+                    -->
+                </li>
+                <li>
+                    <!-- input:image+input:button+button:button+input:file+input:submit+input:reset -->
+                    <input type="image" src="https://placehold.co/150x50?text=button" alt="image button">
+                    <!-- 잘 쓰이진 않음, 버튼에 애니메이션이 들어가는 경우가 많은데 이미지가 있으면 작동이 되지 않기 때문 -->
+                    <input type="button" value="우편번호찾기">
+                    <!-- 어떤 기능을 요청할 때 사용(요청을 하여 데이터를 받는 등) -->
+                    <button type="button">비밀번호 확인</button>
+                    <!-- html5에서 태어났으며 복잡한 버튼체계를 통일하기도 함 -->
+                    <input type="file">
+                    <!-- 파일 등록까진 가능하나 전송은 되지 않는다. -->
+                    <input type="submit" value="전송">
+                    <!-- form 안에 존재해야 form 내용을 전송한다. -->
+                    <input type="reset" value="취소">
+                    <!-- 뒤로가기, 브라우저 닫기 등을 했을 때 데이터가 더미 데이터로 남기 때문에 reset 버튼으로 초기화 시킨다. -->
+
+                    <!-- 
+                        button은 최종 확인 전송 및 페이지 양식 되돌리기, 파일 찾아보기 기능을 제외한 나머지 기능의 버튼에 사용한다.
+                        ex> 우편번호, 검색, 추가, 삭제 등
+                    -->
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>HTML5 Input's</legend>
+            <ul>
+                <li>
+                    <!-- label[for='userEmail']+input:email#userEmail -->
+                    <label for="userEmail">이메일 :</label>
+                    <input type="email" id="userEmail" required minlength="5" maxlength="10">
+                    <!-- 
+                        :email - email을 전문적으로 입력 받는 field. required(필수) attr을 부여 하면 email 주소양식 자동 검수
+                        1. touchkeypad 일 경우(tablet,moblie) 키패드 배열에 @가 추가된다.
+                        2. required(필수) - 모든 input에 사용 가능
+                        3. minlength, maxlength - 글자 수 제한
+                        4. autofocus - 페이지가 열릴 때 자동으로 초점을 맞춰주는 기능(시각장애인들에게 정보전달에 방해가 되지 않는 선)
+                        5. placeholder - 시각적 입력정보 안내를 넣는 것
+                    -->
+                </li>
+                <li>
+                    <label for="userWebUrl">웹사이트 :</label>
+                    <input type="url" id="userWebUrl" required value="https://www.naver.com" disabled>
+                    <!-- 
+                        :url - url을 전문적으로 입력 받는 field. reqiured(필수) attr을 부여 하면 web 주소양식 자동 검수
+                        1. readonly : 읽기전용(서버에 저장이 된 적이 있는 데이터를 불러오지만 수정 불가)
+                        2. disabled : 비활성화(입력자체불가, 서버에 전송자체가 이루어 질 수 없음)
+                    -->
+                </li>
+                <li>
+                    <label for="userPN">전화번호 :</label>
+                    <input type="tel" id="userPN" placeholder="'-'를 뺀 숫자만 입력하세요." title="'-'를 뺀 숫자만 입력하세요.">
+                    <!-- 
+                        :tel - 한 줄로 전화번호를 입력받을 수 있는 field.
+                    -->
+                </li>
+                <li>
+                    <label for="qty">수량: </label>
+                    <input type="number" id="qty" min="1" max="10" step="2" value="1">
+                    <!-- 
+                        :number - 수량전문 tag. 증가 및 감소가 가능함(숫자만 입력하는 번호, 금액 등에 금지)
+                        1. min - 최소 수량
+                        2. max - 최대 수량
+                        3. step - 1회 증/감시 작동할 수치
+                        4. value - 초기 수량
+                    -->
+                </li>
+                <li>
+                    <label for="sizeSet">규격 :</label>
+                    <input type="range" id="sizeSet" min="1" max="10" step="1" value="1">
+                    <!-- 
+                        :range - 범위 내 값을 선택하는 barble ui - slider 형식으로 작동됨
+                        1. min - 최소 수량
+                        2. max - 최대 수량
+                        3. step - 1회 증/감시 작동할 수치
+                        4. value - 초기 수량
+                    -->
+                </li>
+                <li>
+                    <label for="typeDate">날짜 선택 :</label>
+                    <input type="date" id="typeDate">
+                    <!-- 연도, 월, 일 선택 가능한 ui / 꾸미기가 어렵고 순정상태의 모바일이나 태블릿 등에 호환이 좋음 -->
+                </li>
+                <li>
+                    <label for="typeDateTime">날짜와 시간 선택 : </label>
+                    <input type="datetime-local" id="typeDateTime">
+                    <!-- 연도, 월, 일, 시, 분 선택 가능한 ui / 꾸미기가 어렵고 순정상태의 모바일이나 태블릿 등에 호환이 좋음 -->
+                </li>
+                <li>
+                    <label for="typeMonth">월 선택 :</label>
+                    <input type="month" id="typeMonth">
+                    <!-- 월 선택 가능한 ui / 꾸미기가 어렵고 순정상태의 모바일이나 태블릿 등에 호환이 좋음 -->
+                </li>
+                <li>
+                    <label for="typeWeek">주 선택 :</label>
+                    <input type="week" id="typeWeek">
+                    <!-- 주 선택 가능한 ui / 위와 동일 -->
+                </li>
+                <li>
+                    <label for="typeTime">시간 선택 :</label>
+                    <input type="time" id="typeTime">
+                    <!-- 시간 선택 가능한 ui / 위와 동일 -->
+                </li>
+                <li>
+                    <label for="searchField">검색 :</label>
+                    <input type="search" id="searchField">
+                    <!-- 검색 전용 input. 특징은 우측에 reset button이 제공된다. 자동완성기능이 가능하다. -->
+                </li>
+                <li>
+                    <label for="typeColor">색상 선택:</label>
+                    <input type="color" id="typeColor">
+                    <!-- colorPicker : 지정된 색상 코드를 기준으로 -,+ @ value를 설정하고 그 안에 일치하는 결과를 가져오는 input -->
+                </li>
+                <li>
+                    <input type="submit" value="전송">
+                </li>
             </ul>
         </fieldset>
     </form>
