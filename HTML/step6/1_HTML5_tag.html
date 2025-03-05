@@ -16,6 +16,50 @@
     </style>
 </head>
 <body>
-    
+    <figure>
+        <img src="https://placehold.co/150" alt="undefined">
+        <figcaption>정의되지 않은 이미지</figcaption>
+    </figure>
+    <!-- ul>li>figure>img+figcaption>dl>dt+dd*2 -->
+    <ul>
+        <li>
+            <figure>
+                <img src="https://placehold.co/150" alt="undefined">
+                <figcaption>
+                    <dl>
+                        <dt>example Name</dt>
+                        <dd>example Descript</dd>
+                        <!-- <dd>example Price</dd> -->
+                    </dl>
+                </figcaption>
+            </figure>
+            <!-- 
+                figure - 상징성이 있는 미디어의 설명을 추가하기 위한 태그
+                * 장점 : figcpation 내부 구조에 다양한 tag들이 사용 가능하기 때문에 구조상 이점이 많다.
+                * 단점 : codeline이 두꺼워진다.
+            -->
+        </li>
+    </ul>
+    <time datetime="2025-03-05T21:00:00Z">2025년 3월 5일 오후 09시 30분</time>
+    <!-- 
+        날짜, 시간을 기록하는 tag
+        1. datetime은 위성시 기준으로 브라우저가 인식하는 날짜와 시간이다. (yyyy-mm-dd)
+        2. 날짜 : 2025-03-05 / 시간 : 21:00:00 / Z는 그리니치 시간대를 나타내는 zulu의 약자
+            -> 영국 런던 그리니치 천문대를 기준으로 하는 협정세계시(UTC) 한국은 UTC+9에 속하기에 9시간을 더해준다.
+    -->
+    <progress value="20" max="100"></progress>
+    <!-- 
+        progress는 나타내고픈 진행 상황을 실시간으로 나타낼 때 사용값을 value로 설정하고 최대값을 max설정하여 시각적 효과를 부여한다.
+        ! 시작이 있으면 끝이 반드시 있어야 다음 단계로 넘어갈 수 있음
+    -->
+    <meter value="81" min="10" max="100" high="80" low="30"></meter>
+    <!-- 
+        meter는 현재 사용량, 소모된 량 등의 상태를 정지된 산출값을 표현하여 모니터링 용도로 사용
+        value= 현재 값, min= 최소값, max=최대값, high= 높음의 기준범위, low= 낮음의 기준범위, optimum= 적당의 기준범위
+        ! 끝이라는게 발생되면 위험한 혹은 잘못된 상황
+    -->
+    <ruby>
+        韓 <rt>かん</rt>
+    </ruby>
 </body>
 </html>
