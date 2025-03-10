@@ -78,17 +78,43 @@
                         </td>
                         <!-- 
                             input name : 퍼블리셔가 쓰는 경우는 radio group을 만들어 줄 때 사용
-                            input id : label과 연결하기 위한 값
-                            label for : input과 연결하기 위한 값
+                            input id : label과 연결하기 위한 값 ex> <input id="userName">
+                            label for : input과 연결하기 위한 값 ex> <label for="userName">
                         -->
                     </tr>
                     <tr>
-                        <th><label for=""></label></th>
-                        <td></td>
+                        <th><label for="hobbyBook">취미</label></th>
+                        <td>
+                            <input type="checkbox" id="hobbyBook">
+                            <label for="hobbyBook">독서</label>
+                            <input type="checkbox" id="hobbyGame">
+                            <label for="hobbyGame">게임</label>
+                            <input type="checkbox" id="hobbyMovie">
+                            <label for="hobbyMovie">영화</label>
+                        </td>
                     </tr>
                     <tr>
-                        <th><label for=""></label></th>
-                        <td></td>
+                        <th><label for="userBirth">생년월일시</label></th>
+                        <td><input type="datetime-local" id="userBirth"></td>
+                    </tr>
+                    <!-- tr*4>(th>label)+td -->
+                    <!-- (tr>(th>label)+td)*4 -->
+                    <!-- 현재 구조에서 둘 다 가능 -->
+                    <tr>
+                        <th><label for="favorColor">좋아하는 색상</label></th>
+                        <td><input type="color" id="favorColor"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="userHeight">키(cm)</label></th>
+                        <td><input type="range" id="userHeight"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="userSNS">SNS</label></th>
+                        <td><input type="url" id="userSNS"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="userComment">가입인사</label></th>
+                        <td><textarea id="userComment" cols="30" rows="10"></textarea></td>
                     </tr>
                 </tbody>
             </table>
