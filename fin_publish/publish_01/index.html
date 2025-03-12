@@ -27,36 +27,38 @@
     <!-- header>div>h1+(nav>ul>li*7>a)+(ul>li>h2+p+a)+(ol>li*4>a) -->
     <header id="home">
     <!-- 원 페이지 형식이기에 nav에 있는 링크들이 도착할 수 있는 지점이 있어야 함 -->
-        <h1>
-            <a href="#home"><img src="../publish_01/images/logo.png" alt="welcom to tajam"></a>
-            <!-- 보통 로고를 클릭했을 때 메인페이지로 이동하기에 #home 삽입 -->
-        </h1>
-        <nav>
+        <div>
+            <h1>
+                <a href="#home"><img src="../publish_01/images/logo.png" alt="welcom to tajam"></a>
+                <!-- 보통 로고를 클릭했을 때 메인페이지로 이동하기에 #home 삽입 -->
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#expertise">EXPERTISE</a></li>
+                    <li><a href="#teams">TEAMS</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#peoplesay">PEOPLE SAY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
             <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#expertise">EXPERTISE</a></li>
-                <li><a href="#teams">TEAMS</a></li>
-                <li><a href="#works">WORKS</a></li>
-                <li><a href="#peoplesay">PEOPLE SAY</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li>
+                    <h2>We Are Awesome Creative Agency</h2>
+                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                    <a href="#">LEARN MORE</a>
+                    <!-- tempLink(#) : 임시링크 -->
+                </li>
             </ul>
-        </nav>
-        <ul>
-            <li>
-                <h2>We Are Awesome Creative Agency</h2>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-                <a href="#">LEARN MORE</a>
-                <!-- tempLink(#) : 임시링크 -->
-            </li>
-        </ul>
-        <!-- 포토샵에는 1개의 형태만 나와있기에 li를 한개만 쓴 후 추후 데이터가 있다면 뒤쪽에서 따로 처리 -->
-        <ol>
-            <li><a href="#">slide</a></li>
-            <li><a href="#">slide</a></li>
-            <li><a href="#">slide</a></li>
-            <li><a href="#">slide</a></li>
-        </ol>
+            <!-- 포토샵에는 1개의 형태만 나와있기에 li를 한개만 쓴 후 추후 데이터가 있다면 뒤쪽에서 따로 처리 -->
+            <ol>
+                <li><a href="#">slide</a></li>
+                <li><a href="#">slide</a></li>
+                <li><a href="#">slide</a></li>
+                <li><a href="#">slide</a></li>
+            </ol>
+        </div>
     </header>
     <!-- header Fin -->
     
@@ -86,7 +88,7 @@
         <hr>
         <ul>
             <li>
-                <h3>WEB DESIGN & DEVELOPMENT</h3>
+                <h3>WEB DESIGN &amp; DEVELOPMENT</h3>
                 <!-- https://entitycode.com/#common-content / 엔티티 코드 -->
                 <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
             </li>
@@ -112,5 +114,111 @@
             </li>
         </ul>
     </section>
+    <!-- expArea Fin -->
+
+    <!-- section#teams.teamArea>h2+p+hr+ul>li*4>figure>figcaption>dl>dt+dd -->
+    <section id="teams" class="teamArea">
+        <h2>MEET OUR AMAZING TEAM</h2>
+        <p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+        <hr>
+        <ul>
+            <li>
+                <figure>
+                    <figcaption>
+                        <dl>
+                            <dt>SEMF UCUK</dt>
+                            <dd>CEO & FOUNDER</dd>
+                        </dl>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <figcaption>
+                        <dl>
+                            <dt>DIK ADALIN</dt>
+                            <dd>ENGINEERING</dd>
+                        </dl>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <figcaption>
+                        <dl>
+                            <dt>JENG KOL</dt>
+                            <dd>DESIGNER</dd>
+                        </dl>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <figcaption>
+                        <dl>
+                            <dt>PET ROMAK</dt>
+                            <dd>MARKETING</dd>
+                        </dl>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+        <p>Become part of our dream team, let’s join us !</p>
+        <a href="#">WE ARE HIRING</a>
+    </section>
+    <!-- teamArea Fin -->
+
+    <!-- section#works.worksArea>(h2>a)+ul>li*12>a>img -->
+    <section id="works" class="worksArea">
+        <h2>
+            OUR WORKS
+            <a href="#" target="_blank">See All Project in dribbble &gt;</a>
+            <!-- css를 편하게 적용하기 위해서 h2안에 a를 삽입 -->
+        </h2>
+        <ul>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://placehold.co/270x200" alt="undefined"></a></li>
+        </ul>
+        <a href="#">LOAD MORE</a>
+        <!-- size에 맞는 thumbnail image를 제공받기 때문에 슬라이스 작업을 하지 않았음 -->
+    </section>
+    <!-- worksArea Fin -->
+
+    <!-- section#peoplesay.talkArea>h2+span+p+div>a+(ul>li*5>a>img)+a -->
+    <section id="peoplesay" class="talkArea">
+        <!-- section, article 태그는 heading tag가 필수. 없을 경우 자식의 heading tag를 뺏어온다. (h2) -->
+        <h2>quote section</h2>
+        <span>&ldquo;</span>
+        <!-- blockquote, textarea 등은 폰트 사이즈를 상속받지 않기에 직접 부여해야 해서 다른태그를 쓰는것을 추천 -->
+        <p>
+            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+            <strong>JANE GALADRIEL</strong>
+            <span>CEO TENGKUREP</span>
+            <!-- 특수성을 띄기에 span 대신 em을 써도 무방 -->
+        </p>
+        <div>
+            <a href="#">&lt;</a>
+            <ul>
+                <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
+                <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
+                <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
+                <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
+                <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
+            </ul>
+            <a href="#">&gt;</a>
+        </div>
+    </section>
+    <!-- peoplesay Fin -->
+     
 </body>
 </html>
