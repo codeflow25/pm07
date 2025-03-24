@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>portland</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CDN 방식(content delivery network) -->
 </head>
 <body>
-    
+    <header>
+        <div>
+            <label for="mui" class="material-icons">menu</label>
+            <h1>
+                <a href="#">
+                    <img src="images/logo.png" alt="welcome to portland">
+                </a>
+            </h1>
+            <input type="checkbox" id="mui">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Devices</a></li>
+                    <li><a href="#">Delivery &amp; Payment</a></li>
+                    <li><a href="#">Guarantee</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+            <div>
+                <strong>CART</strong><span>+99</span>
+                <!-- * 카트 담김 수가 최대가 몇인지 알아야 뒤쪽에서도 제한선을 둘 수 있음(디자이너가 센스것 해주면 좋다.) -->
+                <input type="button" value="SIGN IN">
+                <!-- * cart, sign in 등이 이동이 아니라 패널, 팝업 등일 경우 input:button 사용 권장 -->
+            </div>
+        </div>
+    </header>
+    <!-- header Fin -->
+     
 </body>
 </html>
