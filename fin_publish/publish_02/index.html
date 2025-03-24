@@ -36,7 +36,75 @@
     </header>
     <!-- header Fin -->
     
+    <nav>
+        <div>
+            <ul>
+                <li><a href="#">Top Sales</a></li>
+                <li><a href="#">Brand Focus</a></li>
+                <li><a href="#">Hi-tech</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <input type="search" placeholder="I’m looking for ..." title="searchField">
+        </div>
+        <!-- 보통 search + button 까지 있는 경우가 일반적(엔터를 쳐야 검색된다는건 어렸을때부터 학습된 것) -->
+    </nav>
 
+    <section class="slideArea">
+        <h2>slide sector</h2>
+        <!-- validation pass -->
+        <div>
+            <a href="#">&lt;</a>
+            <a href="#">&gt;</a>
+            <!-- infinity loop가 아닌 처음과 마지막에서는 컨트롤러가 없어진다. -->
+            <ol>
+                <li><a href="#">slide</a></li>
+                <li><a href="#">slide</a></li>
+                <li><a href="#">slide</a></li>
+                <li><a href="#">slide</a></li>
+            </ol>
+            <!-- 
+                컨트롤러 -> 인디케이터 -> 내용 이런식으로 흘러가야 접근성 면에서 좋다.
+                -> 스크린 리더가 읽어줄 때 1번 슬라이드 / iPhone 6 ~~
+            -->
+            <ul>
+                <li>
+                    <figure>
+                        <img src="images/sample_slider.png" alt="iPhone6">
+                        <figcaption>
+                            <dl>
+                                <dt>iPhone 6 32Gb <br>
+                                    Black</dt>
+                                <dd>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</dd>
+                            </dl>
+                            <input type="button" value="BUY NOW">
+                            <!-- 
+                                input들은 css속성을 잘 받아들이지 못한다.
+                                기본적으로 가지고 있는 속성이 있기에 취소코드를 사용하여 취소 후 재적용
+                            -->
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- slider Fin -->
+
+    <div class="contentArea">
+        <form>
+            <fieldset>
+                <label for="sb_Select">SORT BY:</label>
+                <span class="selectBox sbSelect">
+                    <select id="sb_Select">
+                        <option>BEST MATCH</option>
+                    </select>
+                </span>
+                <!-- select arrow custom을 위해 span을 사용 -->
+                <!-- 간격 등 다른 부분이 있을 수 있기에 sbSelect 라는 클래스를 한번 더 사용 -->
+            </fieldset>
+        </form>
+    </div>
     <footer>
         <div>
             <h2><img src="images/logo_footer.png" alt="goodbye portland"></h2>
