@@ -128,6 +128,10 @@
                 <ul>
                     <li>
                         <a href="#">Top Sales</a>
+                        <!-- 
+                            <b>Top Sales</b>
+                                -> 상위 중첩 메뉴에는 이동 기능 부여 불가능 - tablet, mobile 에서는 hover -> touch로 인식되기 때문
+                         -->
                         <ol>
                             <li><a href="#">Cell Phones</a></li>
                             <li><a href="#">Cameras</a></li>
@@ -226,10 +230,155 @@
                     <label for="condition_op5">For Parts or not Working</label>
                 </fieldset>
                 <fieldset>
-
+                    <!-- (input:radio[name='dlvr_select']#dlvr_+label[for='dlvr_'])*2 -->
+                    <input type="radio" name="dlvr_select" id="dlvr_free">
+                    <label for="dlvr_free">Free</label>
+                    <input type="radio" name="dlvr_select" id="dlvr_dollar">
+                    <label for="dlvr_dollar">$4.99</label>
                 </fieldset>
             </form>
         </aside>
+        <!-- aside Fin -->
+
+        <section>
+            <h3>ProductList</h3>
+            <!-- validation pass -->
+            <!-- ul>li*11>figure>img[src='images/sample_product0$.png']+figcaption>dl>dt+dd*2 -->
+            <ul>
+                <li>
+                    <figure>
+                        <img src="images/sample_product01.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Apple TV 32GB</dt>
+                                <dd>Black</dd>
+                                <dd>$49.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product02.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Pebble Time</dt>
+                                <dd>Red</dd>
+                                <dd>$29.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product03.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Zendure 4-Port USB</dt>
+                                <dd>White</dd>
+                                <dd>$49.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product04.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Withings Smart Body Analyzer ws-50</dt>
+                                <dd>Black</dd>
+                                <dd>$39.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product05.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt></dt>
+                                <dd></dd>
+                                <dd></dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product06.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Ollo Clip New</dt>
+                                <dd>Silver</dd>
+                                <dd>$19.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product07.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Fitbit Charge HR Heart Rate and Activity Tracker</dt>
+                                <dd>Black</dd>
+                                <dd>$19.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product08.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Apple Watch Sport 38mm Silver Aluminum Case</dt>
+                                <dd>White</dd>
+                                <dd>$49.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product09.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Bose SoundLink On-Ear Headphones</dt>
+                                <dd>White</dd>
+                                <dd>$119.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product10.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt></dt>
+                                <dd></dd>
+                                <dd></dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sample_product11.png" alt="productExample">
+                        <figcaption>
+                            <dl>
+                                <dt>Sonos Play-1 Wireless HiFi System</dt>
+                                <dd>Black</dd>
+                                <dd>$99.99</dd>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
     </div>
 
     <footer>
