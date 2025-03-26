@@ -298,10 +298,16 @@
                         <img src="images/sample_product05.png" alt="productExample">
                         <figcaption>
                             <dl>
-                                <dt></dt>
-                                <dd></dd>
-                                <dd></dd>
+                                <dt>JBL Charge 2+</dt>
+                                <dd>Black</dd>
+                                <dd>$39.99</dd>
+                                <!-- 디자인 방식이 바뀌어도 컨텐츠는 그대로 가져가기에 구조는 동일한 순서로 작성 -->
                             </dl>
+                            <span>
+                                <a href="#">16 GB</a>
+                                <a href="#">BUY NOW</a>
+                            </span>
+                            <!-- 추가정보가 있는 상품에만 추가구조 작성 -->
                         </figcaption>
                     </figure>
                 </li>
@@ -358,9 +364,11 @@
                         <img src="images/sample_product10.png" alt="productExample">
                         <figcaption>
                             <dl>
-                                <dt></dt>
+                                <dt>Nest Learning Thermostat, 3rd Generation</dt>
                                 <dd></dd>
-                                <dd></dd>
+                                <!-- 태그안을 비워두는건 좋지 않고 text 입력 후 display: none 처리 권장 -->
+                                <dd>$49.99</dd>
+                                <!-- css에서 편하게 작성하기 위해 없는 컨텐츠에도 태그를 입력하여 순서 맞추기 -->
                             </dl>
                         </figcaption>
                     </figure>
@@ -379,6 +387,7 @@
                 </li>
             </ul>
         </section>
+        <!-- contentSection -->
     </div>
 
     <footer>
