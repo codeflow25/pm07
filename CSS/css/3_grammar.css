@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+h1{
+    font-size: 12px; color: #f03;
+}
+img{
+    width: 150px; border: 3px solid #3f3;
+}
+ul,ol,dl{
+    color: #60f;
+}
+/* css에서는 , 로 여러태그를 짚을 수 있다(grouping) */
+li,dl{
+    font-size: 25px;
+}
+
+ul li{
+    font-weight: bold;
+}
+/* css에서 띄어쓰기는 자손을 찾는 행위 */
+
+ol li{
+    text-decoration: underline;
+}
+
+dl dt{
+    color: orange;
+}
+dl dd{
+    color: brown;
+}
