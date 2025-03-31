@@ -28,3 +28,13 @@
 .btn.cancel{
     color: gray; background-color: lightgray; border: gray;
 }
+
+#userName{
+    border: 1px solid #eaeaea; line-height: 30px; font-size: 24px; color: green;
+}
+/* 
+    id는 한 페이지 내에서 동일한 id가 한개만 허용된다.
+    전체 system 에서 한 역할의 id는 하나여야 한다.
+    ex> 회원가입이름(userName) / 회원정보이름(userName) / 주문정보이름(userName) -- X
+    ex> 회원가입이름(createUserName) / 회원정보이름(readUserName) / 주문정보이름(purchaseUserName) -- O
+*/
