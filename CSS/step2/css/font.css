@@ -85,3 +85,34 @@ button.test{
     background: url('http://placehold.co/150x50?text=blahblahTestButton');
     border: none; width: 150px; height: 50px; text-indent: -9999px;
 }
+/* text-indent: button or sns icon 등에 백그라운드 이미지 등을 썼을 때 접근성을 위해 text는 남기고 text-indent 등으로 눈에만 보이지 않게 처리 */
+
+a{
+    display: block; line-height: 42px;
+}
+a.t_deco_N{
+    text-decoration: none; text-transform: none; color: #090;
+}
+a.t_deco_U{
+    text-decoration: underline; text-transform: lowercase; color: #0cf;
+}
+a.t_deco_O{
+    text-decoration: overline; text-transform: capitalize; color: #96c;
+}
+a.t_deco_T{
+    text-decoration: line-through; text-transform: uppercase; color: #f63;
+}
+
+p.DR_ltr{
+    /* direction: ltr; */
+    text-align: left;
+}
+p.DR_rtl{
+    /* direction: rtl; */
+    text-align: right;
+}
+/* direction은 정렬이 아닌 단순 방향만 나타내며 쓰이지 않는 속성. align 권장 / ltr이 기본 값 */
+fieldset{
+    text-align: center;
+}
+/* text-align: 글자뿐만 아니라 inline, inline-block Tag's 정렬 가능 */
