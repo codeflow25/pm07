@@ -18,3 +18,70 @@ body{
 h1{
     font-size: 70px; font-weight: 100;
 }
+h2{
+    font-size: 15px; color: #F96; line-height: 21px;
+}
+h3{
+    font-size: 13px; color: #00d; line-height: 19px;
+}
+p{
+    font-size: 14px;
+}
+/* 수업중에 class로 구분지어 사용중이지만 태그를 편하기 부르기 위해 클래스를 사용하는것은 옳지 않다 */
+p.letter{
+    letter-spacing: 10px;
+}
+/* 
+    letter-spacing : 자간. &nbsp;(공백문자) - 공백에도 자간이 적용이 되는 어색한 부분이 있다. (포토샵 수치와 다름)
+    photoshop : 자간 100 / css : 10px 정도. // 시안에서 자간을 많이 사용하면 자간처리를 다 해야하기 때문에 좋지 않음
+*/
+p.word{
+    word-spacing: 10px;
+}
+/* 
+    word-spacing - 단간. 국내 사용X (띄어쓰기 규칙이 다르기 때문)
+    -> 영어는 단어와 단어 사이 공간을 두는 방식이 중요하지만 한국어는 문법적으로 중요하지 않기 때문이다.
+*/
+p[class^='w_']{
+    width: 150px; border: 3px solid black; line-height: 22px;
+}
+p.w_normal{
+    white-space: normal;
+}
+/* default css : ex> font-size: 16px; font-weight: regular; white-space: normal ... // bodyTag margin: 8px; ... */
+
+p.w_nowrap{
+    /* white-space: nowrap; text-overflow: ellipsis; overflow: hidden; */
+    white-space: nowrap; overflow-x: scroll;
+}
+
+.v_alignTest img{
+    vertical-align: middle;
+}
+.v_alignTest span{
+    /* vertical-align: -100%; */
+    display: inline-block;
+}
+/* 
+    vertical-align : 수직정렬
+    1. display: inline, inline-block 끼리 적용 가능
+    2. 높은 대상을 기준으로 값을 적용
+    3. 작은 대상에게 수동 수치를 입력하여 나머지 부분을 보정할 수 있다.
+    ! img는 text와 계산 방식이 틀리기 때문에 imgTag's 에 적용해야 한다.
+*/
+/* 
+baseline : 문자의 밑선에 맞추어 정렬(default)
+middle : 문자의 중앙을 기준으로 정렬
+sub : 아래첨자
+super : 위 첨자
+text-top : 문자의 윗선을 밑선으로 해서 정렬
+top : 위쪽에 정렬
+% : 퍼센트로 정렬 위치를 지정(선 처리 된 방향에 따라 적용 기준이 달라진다. ex> top 일경우 +값은 불가)
+*/
+p.t_indent{
+    text-indent: 200px; font-size: 20px;
+}
+button.test{
+    background: url('http://placehold.co/150x50?text=blahblahTestButton');
+    border: none; width: 150px; height: 50px; text-indent: -9999px;
+}
