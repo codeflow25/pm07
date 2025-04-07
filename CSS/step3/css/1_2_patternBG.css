@@ -4,3 +4,16 @@ html,body,.wrap{
 body,p{
     margin: 0;
 }
+.wrap{
+    background-image: url('../images/pt.gif');
+    background-repeat: no-repeat;
+}
+.wrap p{
+    background: rgba(127, 255, 212, 0.5); padding: 20px; margin: 0 0 20px;
+}
+.wrap button{
+    line-height: 75px; padding: 0 140px; background-image: url('../images/pt_ex.png');
+    color: white; background-repeat: repeat-x;
+}
+/* repeat-x,y 로 구분가능 */
+/* line-height 로 중앙맞춤 */
