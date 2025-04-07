@@ -1,0 +1,26 @@
+*{
+    margin: 0; padding: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background: url('../images/example.jpg') center / cover no-repeat fixed;
+    /* background-image: url('../images/example.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+
+    /* 
+        background 단축속성 순서는 크게 상관없으나 position, size는 둘다 %단위가 가능하기 때문에
+        별도 구분을 위해 / 를 사용하여 구분을 짓는다.
+        / 없이 %를 쓰게 되면 position 으로 인식. position 뒤에 size를 입력해야 함.
+        단축속성에는 position 없이 size 단독 사용 불가.
+
+        * 웹에서는 위에서 아래로 떨어지기 때문에 y축의 개념이 정반대
+    */
+}
+div{
+    background-color: white; margin-bottom: 15%; padding: 5%;
+}
