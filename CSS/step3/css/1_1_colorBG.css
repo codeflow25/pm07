@@ -10,3 +10,20 @@ p{
     height: 100%;
     background-color: skyblue;
 }
+
+/* 1. .topLine 배경색 */
+.wrap .topLine{
+    background: lightpink;
+}
+/* 2. .topLine input 배경색 */
+.wrap .topLine input{
+    /* background-color: lightgreen; */
+    background-color: transparent;
+}
+/* 3. p 각각의 배경색 */
+.wrap p{
+    background-color: lightgoldenrodyellow;
+}
+.wrap .topLine p{
+    background-color: lightseagreen;
+}
