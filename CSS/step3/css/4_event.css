@@ -1,0 +1,42 @@
+a{
+    font-size: 40px; margin-left: 20px; display: inline-block;
+}
+a:link{
+    color: olive;
+    /* js등을 통해 일반 태그에도 href 부여 가능 = :link 상태 */
+}
+a:visited{
+    color: red;
+    /* 방문한 적이 있는 상태 */
+}
+a:hover{
+    color: #3cf; text-decoration: none; font-size: 50px;
+    /* mouse cursor가 올라간 상태 - 제일 중요, 많이 사용됨 */
+}
+a:active{
+    color: yellow;
+    /* mouse Click - 누르고 있는 상태도 사용이 되나 click 풀리지 않아 일어나는 현상 */
+}
+input#userName:focus{
+    background-color: lightgreen;
+    border: 2px solid forestgreen;
+    outline: none;
+    /* 
+        outline - 색약, 색맹들을 위해 대상에 초점이 맞춰지는 상황일때 browser가 제공하는 선
+        -> 포커스를 인식하는데 시각적 도움을 주며 변화가 일어나면 알기 어렵다(되도록 비수정)
+
+        click 과 focus 는 전혀 다른 개념 ex> tab key로도 foucs가 가능함
+    */
+}
+input#chkType1{
+    width: 25px; height: 25px; accent-color: red;
+}
+input#radioType1{
+    accent-color: magenta;
+}
+input#volType1{
+    accent-color: lime;
+}
+progress{
+    accent-color: blueviolet;
+}
