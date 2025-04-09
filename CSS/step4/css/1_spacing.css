@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+.firstDiv{
+    background-color: #555;
+    /* margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px; */
+    margin: 10px;
+}
+.firstDiv article{
+    background-color: #039; color: white;
+}
+.secondDiv{
+    background-color: #aaa;
+    margin: 30px 30px 0;
+    /* 2. 그렇기 때문에 margin과 padding을 올바르게 사용해야 한다. */
+    padding: 0 0 50px 30px;
+    /* 
+        4개의 방향이 적용될 때
+        1개 - 4방향
+        2개 - 위, 아래 / 오른쪽, 왼쪽
+        3개 - 위 / 오른쪽, 왼쪽 / 아래
+    */
+}
+.secondDiv article{
+    background-color: #930;
+    /* 1. margin-bottom: 50px; margin-left: 30px; - 잘못 사용된 예 */
+}
