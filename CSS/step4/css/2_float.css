@@ -1,0 +1,42 @@
+*{
+    margin: 0; padding: 0;
+}
+.wrap{
+    background-color: gray;
+}
+.wrap .exam_1{
+    background-color: lightskyblue;
+}
+.wrap .exam_1:after{
+    content: ''; display: block; clear: both; visibility: hidden;
+}
+/* 
+    :afterCanceler - float로 인해 무너지는 부모공간을 복원하기 위하여
+    - 적용대상 : float들의 부모
+    1. :after - 후위 선택자(지정위치 맨 마지막 부분)
+    2. content - 지정된 대상에 무언가를 넣어주는 역할 (ex> content: '1'; -> 맨밑에 1이 들어감)
+    3. display: block - width: 100%;
+    4. clear - float Counter(무효화). both (둘 다). float는 left, right만 존재하기 때문
+    5. visibility: hidden - 가시성 끄기(비필수. 예전에 하얀 선이 보이는 문제가 있었음)
+*/
+.wrap .exam_1 img{
+    float: left;
+}
+.wrap .exam_1 p{
+    font-size: 20px; line-height: 26px;
+}
+.wrap .exam_2{
+    background-color: lightseagreen; margin-bottom: 10px;
+    /* 2. exam_3의 clear가 작동 되더라도 정상적으로 적용되지가 않음 */
+}
+.wrap .exam_2:after{
+    content: ''; display: block; clear: both;
+    /* 3. 그래서 float의 대상들의 부모에게 :afterCancel 처리를 해야함 */
+}
+.wrap .exam_2 div{
+    width: 33.33%; background-color: lightpink; float: left;
+}
+.wrap .exam_3{
+    background-color: orange;
+    /* 1. clear: left; - 근본적 문제해결은 되지 않는다. // 본인은 정상이 됐지만 exam_2의 무너짐은 해결이 안됨*/
+}
