@@ -39,4 +39,6 @@ div{
 }
 .circleBox{
     /* 사이즈 상관없이 정원 모양 만들기. 배경색, 글자는 수직 수평 모두 중앙 */
+    background-color: midnightblue; width: 300px; height: 300px; border-radius: 150px;
+    text-align: center; line-height: 300px; color: cyan;
 }
