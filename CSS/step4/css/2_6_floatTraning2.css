@@ -1,0 +1,16 @@
+*{
+    margin: 0; padding: 0;
+}
+ul li{
+    float: left; width: 16.66%; border: 1px solid black; box-sizing: border-box; display: block;
+    /* width: calc(16.66% - 2px); float: left; border: 1px solid black; display: block; */
+    /* box-sizing 없이 calc로 해결가능 */
+}
+ul li figure img{
+    width: 100%;
+    display: block;
+    /* inline-block이 가지고 있는 margin 4px */
+}
+ul li figure figcaption dl{
+    background-color: yellow; text-align: center;
+}
