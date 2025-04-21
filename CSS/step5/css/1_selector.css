@@ -15,3 +15,76 @@
 .classSelector p.f_color{color: #9cf;}
 
 /* CLASS 선택자 + 다중 클래스 */
+
+.attrSelector fieldset{
+    border: 1px solid #555; background-color: lightseagreen; border-radius: 20px 0 20px;
+}
+.attrSelector fieldset legend{
+    border: 1px solid slateblue; background-color: #555; color: white; padding: 10px;
+    border-radius: 10px 0 10px;
+}
+.attrSelector fieldset ul{
+    margin: 0; padding: 0; list-style: none;
+}
+.attrSelector fieldset ul li{
+    color: white; font-size: 14px; line-height: 30px; margin-bottom: 10px;
+}
+.attrSelector fieldset ul li label{
+    width: 100px; display: inline-block;
+}
+.attrSelector fieldset ul li input{
+    padding: 5px; vertical-align: middle;
+}
+.attrSelector fieldset ul li input[type='text']{
+    background-color: salmon; border: 3px solid crimson; color: maroon;
+}
+.attrSelector fieldset ul li input[type='password']{
+    background-color: lightgreen; border: 3px solid lime; color: forestgreen;
+}
+.attrSelector fieldset ul li input[type='radio']{
+    width: 25px; height: 25px; accent-color: brown;
+}
+.attrSelector fieldset ul li input[type='checkbox']{
+    width: 25px; height: 25px; accent-color: orange;
+}
+/* attrSelector의 한계 : img 등은 src가 너무 길기 때문이다. */
+
+.directSelector>h1{
+    font-size: 28px; color: #66f;
+}
+
+.sameSelector h1~h2{
+    background-color: #999;
+}
+.sameSelector h1+h2{
+    font-size: 40px; color: deeppink;
+}
+/* 
+    ~: 동일 선상에서 뒤에 있는 태그들을 짚음
+    +: 동일 선상에서 바로 뒤에있는 태그만 짚음
+*/
+
+.stringAttrSelector img[src$='png']{
+    width: 100px; border: 3px solid red;
+}
+.stringAttrSelector img[src$='gif']{
+    width: 300px; border: 10px solid #00f;
+}
+.stringAttrSelector h1[title*='제목']{
+    color: green;
+}
+.stringAttrSelector h1[title^='남자']{
+    color: blue;
+}
+.stringAttrSelector h1[title|='탈의실']{
+    color: deeppink;
+}
+
+/* 
+    문자열
+    *=: 해당 문자가 들어가는 모든 대상 선택(위치상관없음)
+    $=: 해당 문자로 끝나는 대상 선택
+    ^=: 해당 문자로 시작하는 대상 선택
+    |=: 해당 문자 이거나 '해당문자-' 로 시작하는 대상
+    ~=: 해당 문자 이거나 띄어쓰기로 구분이 될때
+*/
