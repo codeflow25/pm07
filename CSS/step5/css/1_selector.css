@@ -139,3 +139,54 @@
 .statusSelector input:disabled{
     background-color: lightpink;
 }
+
+.virtualSelector ul{
+    overflow: hidden; list-style: none; margin: 30px 0; padding: 0;
+}
+.virtualSelector ul li{
+    float: left; width: 14.28%; text-align: center; padding: 15px; box-sizing: border-box;
+}
+.virtualSelector ul :nth-child(2n+1){
+    background-color: #444; color: white;
+}
+.virtualSelector ul :nth-child(2n){
+    background-color: #09f;
+}
+.virtualSelector ul :nth-child(2){
+    background-color: darkred;
+}
+.virtualSelector ul :first-child{
+    border-radius: 20px 0 0 20px;
+}
+.virtualSelector ul :last-child{
+    border-radius: 0 20px 20px 0;
+}
+/* 
+    :nth - n번째로 단순번호만 기재시 해당 번호의 해당하는 자손요소가 불러와짐
+    -child - 부모가 바라보는 기준에서 자손 순서를 의미(tag 선택을 하지 않아도 됨
+
+    ? '2n+3'
+    * 앞 숫자와 n 은 간격을 몇으로 둘건지를 의미 2n = 2의 간격
+    * 뒤 숫자는 몇 번째부터 시작할건지를 의미 3 = 3번부터 시작
+    == 2n+3은 3, 5, 7, 9 ...
+*/
+
+.shapeSelector h1:first-of-type{
+    color: #5cf;
+}
+.shapeSelector h2:last-of-type{
+    color: #92c;
+}
+.shapeSelector h3:nth-of-type(2){
+    color: #06d;
+}
+/* 
+    of-type : 해당 태그의 번째, child와 다르게 꼭 태그명이 필요하다.
+*/
+
+.textSelector h1::first-letter{
+    font-size: 100px; color: #09f;
+}
+.textSelector p::first-line{
+    color: #090; line-height: 30px; font-size: 14px; text-decoration: underline;
+}
