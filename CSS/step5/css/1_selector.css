@@ -191,4 +191,24 @@
     color: #090; line-height: 30px; font-size: 14px; text-decoration: underline;
 }
 
-.backandfrontSelector
+.backandfrontSelector p{
+    counter-increment: rint;
+}
+.backandfrontSelector p::before{
+    content: counter(rint) '.'; color: deeppink; font-weight: bold; font-size: 24px;
+}
+.backandfrontSelector p::after{
+    content: '-' attr(data-page) "page"; color: deeppink; font-weight: bold; font-size: 24px;
+}
+
+.reactionSelector *{
+    color: #fff;
+}
+.reactionSelector *::selection{
+    background-color: black; color: yellow; font-size: 30px; font-weight: bold;
+    text-decoration: underline;
+}
+
+.notSelector input:not([type='password'],[type='submit']){
+    background-color: #00f; border: 5px solid green;
+}
