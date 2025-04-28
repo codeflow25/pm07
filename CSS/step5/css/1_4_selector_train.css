@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body{
+    font-family: 'Noto Sans KR';
+}
+div:first-of-type{
+    max-width: 960px; margin: 0 auto;
+}
+div:first-of-type fieldset{
+    border-width: 1px; border-color: #05f; margin: 0; padding: 15px 20px 25px;
+}
+div:first-of-type fieldset label{
+    line-height: 30px; display: inline-block; vertical-align: middle;
+}
+div:first-of-type fieldset input[type='checkbox']{
+    width: 20px; height: 20px; accent-color: #f50; vertical-align: -45%;
+}
+div:first-of-type fieldset textarea{
+    display: block; width: 100%; padding: 10px 1%; box-sizing: border-box;
+    border-color: mediumslateblue; resize: none; height: 300px;
+    margin-top: 20px; transition: all .5s ease-out;
+}
+div:first-of-type fieldset input[type='checkbox']:checked+textarea{
+    height: 0px; padding: 0 1%;
+    /* 
+        height: 0 일때 잔여 padding 값이 있기에 확실히 없어지지 않기에 padding 값까지 제거 필요
+        ! 단 좌, 우 패딩까지 없앨 경우 좌, 우 애니메이션도 일어나기에 좌우 값은 기존값으로 남겨둬야 한다.
+    */
+
+}
