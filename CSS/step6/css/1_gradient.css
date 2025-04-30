@@ -1,0 +1,23 @@
+[class$='G']:not(.yellowG){
+    padding: 20px;
+}
+/* gradient 는 유사색 계열이 안정적이며 핀 설정이 많을수록 유연하고 부드러워진다. */
+.redG{
+    background: #9b1f1f;
+    /* 적용 안되었을 때 대비 */
+    background: linear-gradient(135deg,#9b1f1f 0%,#ea7e7e 100%);
+    /* 적용광각, 색상 및 위치지정1, 색상 및 위치지정2 ... */
+}
+.greenG{
+    background: #20a024;
+    background: linear-gradient(to right,#20a024 0%,#71c46b 100%);
+}
+.blueG{
+    background: #1e5799;
+    background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%);
+}
+.yellowG{
+    width: 250px; line-height: 250px; text-align: center; border-radius: 125px; 
+    background: radial-gradient(ellipse at center, #fefcea 0%, #f1da36 100%);
+}
+/* https://www.colorzilla.com/gradient-editor/ */
