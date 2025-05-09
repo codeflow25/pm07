@@ -1,0 +1,9 @@
+body{
+    width: 200px; margin: 200px auto;
+}
+div{
+    width: 200px; height: 200px;
+}
+div span{
+    width: 200px; height: 200px; opacity: 0.5;
+}
