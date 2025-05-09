@@ -7,7 +7,7 @@ h1{
 article{
     background-color: lightsalmon; padding: 10px;
 }
-article{
+article h2{
     padding: 10px; font-size: 18px; background-color: lightblue;
 }
 article p{
