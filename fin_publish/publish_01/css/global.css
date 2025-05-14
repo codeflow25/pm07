@@ -1,5 +1,9 @@
-header div nav ul li a{
-    font-family: "Roboto";
+header div nav ul li a,
+header div>ul li{
+    font-family: 'Roboto';
+}
+header div>ul li h2{
+    font-family: 'Playfair Display';
 }
 
 a{
@@ -45,4 +49,8 @@ ul,ol{
         color: #00e0d0;
     }
     /* header GNB Fin */
+
+    header div>ul li{
+        padding-top: 165px;
+    }
 }
