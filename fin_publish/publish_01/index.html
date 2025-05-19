@@ -199,7 +199,6 @@
     <section id="peoplesay" class="talkArea">
         <!-- section, article 태그는 heading tag가 필수. 없을 경우 자식의 heading tag를 뺏어온다. (h2) -->
         <h2>quote section</h2>
-        <span>&ldquo;</span>
         <!-- blockquote, textarea 등은 폰트 사이즈를 상속받지 않기에 직접 부여해야 해서 다른태그를 쓰는것을 추천 -->
         <p>
             This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
@@ -212,7 +211,7 @@
             <ul>
                 <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
                 <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
-                <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
+                <li class="active"><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
                 <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
                 <li><a href="#"><img src="../publish_01/images/ex_01.png" alt="thumbnailEx"></a></li>
             </ul>
@@ -231,7 +230,7 @@
                 <input type="email" placeholder="Email" title="user Email">
                 <input type="text" placeholder="Subject" title="user postSubject">
                 <textarea placeholder="Your Message" title="Your Message"></textarea>
-                <input type="submit" value="SUBMIT">
+                <input type="submit" value="SUBMIT" class="btn_more">
             </fieldset>
         </form>
         <!-- <div>
