@@ -16,9 +16,10 @@ ul,ol{
 .btn_more{
     font-family: 'Hammersmith One'; font-weight: 400; font-size: 16px;
     border: 1px solid #00e0d0; color: #00e0d0; display: block;
-    text-align: center; padding: 12px 0.6%; box-sizing: border-box; margin: 0 auto;
+    text-align: center; padding: 12px 0.6%; box-sizing: border-box;
 }
 @media screen and (min-width: 1280px){
+    #about,
     footer>div{
         max-width: 940px; margin: 0 auto; padding: 70px 0;
     }
@@ -75,7 +76,7 @@ ul,ol{
         max-width: 775px; margin: 0 auto 50px;
     }
     header div>ul li a.btn_more{
-        max-width: 120px;
+        max-width: 120px; margin: 0 auto;
     }
     header div ol{
         text-align: center;
