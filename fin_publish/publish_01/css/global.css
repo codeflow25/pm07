@@ -1,9 +1,18 @@
 header div nav ul li a,
 header div>ul li,
+#about figcaption p,
+section.videoArea h2,
+section.expArea ul,
+section.teamArea ul,
+section.teamArea ul+p,
 footer *{
     font-family: 'Roboto';
 }
-header div>ul li h2{
+header div>ul li h2,
+#about figcaption h2,
+section.expArea>*:not(ul),
+section.teamArea h2,
+section.teamArea h2+p{
     font-family: 'Playfair Display';
 }
 
