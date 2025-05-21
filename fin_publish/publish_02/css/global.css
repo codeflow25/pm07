@@ -8,3 +8,28 @@ body{
 .crim{
     font-family: 'Crimson Pro';
 }
+
+a{
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1280px){
+
+    header{
+        border-bottom: 1px solid #f0f2f7; background-color: #fff;
+    }
+    header>div{
+        max-width: 1170px; margin: 0 auto;
+    }
+    header>div::after{
+        content: ''; display: block; clear: both;
+    }
+    header>div>*{
+        float: left;
+    }
+    header>div label.material-icons{
+        /* material icons 등등은 css 적용시 class까지 입력 */
+        width: 5.12%; max-width: 60px; line-height: 90px; box-sizing: border-box;
+        border-right: 1px solid #f0f2f7; display: block;
+    }
+}
