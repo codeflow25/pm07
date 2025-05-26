@@ -9,6 +9,11 @@ body{
     font-family: 'Crimson Pro';
 }
 
+input[type='radio'],
+input[type='checkbox']{
+    display: none;
+}
+
 a{
     text-decoration: none;
 }
@@ -32,4 +37,48 @@ a{
         width: 5.12%; max-width: 60px; line-height: 90px; box-sizing: border-box;
         border-right: 1px solid #f0f2f7; display: block;
     }
+    header>div h1{
+        width: 10.68%; max-width: 125px;
+    }
+    header>div h1 a{
+        display: block; padding: 32px 0; text-align: right;
+    }
+    header>div h1 a img{
+        width: 100%; max-width: 92px;
+    }
+    header>div nav{
+        width: 54.7%; text-align: right;
+    }
+    header>div nav ul li{
+        display: inline-block;
+    }
+    header>div nav ul li:not(:first-child){
+        margin-left: 2.56%;
+    }
+    header>div nav ul li a{
+        display: block; font-size: 14px; font-weight: 600; color: #343e5c;
+        line-height: 90px;
+    }
+    header>div div{
+        width: 29.5%; font-size: 11px; color: #343e5c; text-align: right;
+        line-height: 90px;
+    }
+    header>div div *:not(input){
+        display: inline-block;
+    }
+    header>div div strong{
+        padding-left: 25px; line-height: 17px; font-weight: 600;
+        background: url('../images/bul_cart.png') left top / contain no-repeat;
+    }
+    header>div div span{
+        width: 24px; line-height: 24px; font-weight: 400; background-color: #e4e8f0; 
+        border-radius: 12px; text-align: center; margin-left: 5px;
+        /* 구조에서 strong과 span이 줄바꿈 되지않고 나란히 쓰였기 때문에 강제 margin이 없다.*/
+    }
+    header>div div input[type='button']{
+        font-size: 11px; font-weight: 600; padding: 6px 15px; border: 2px solid #e3e8f0;
+        border-radius: 16px; background-color: #fff;
+        letter-spacing: 1px; margin-left: 25px; font-family: inherit;
+    }
+    /* header Fin */
 }
