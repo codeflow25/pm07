@@ -22,6 +22,19 @@
     }
     header+nav div ul li a{
         display: block; font-size: 11px; font-weight: 600; color: #b9bed1;
-        line-height: 56px; letter-spacing: 1px;
+        line-height: 56px; letter-spacing: 1px; text-transform: uppercase;
+    }
+    header+nav div ul li a:hover,
+    header+nav div ul li a.active{
+        color: #343e5c;
+    }
+    header+nav div input[type='search']{
+        width: 17%; margin-left: 3%; padding: 20px 2% 20px 3.5%; box-sizing: border-box;
+        border-width: 0 1px; border-style: none solid; border-color: #f0f2f7;
+        background: url('../images/bul_search.png') no-repeat 9% center;
+        font-size: 14px; font-weight: 600; font-family: inherit; color: #343e5c;
+    }
+    header+nav div input[type='search']::placeholder{
+        color: #a1a8bd;
     }
 }
