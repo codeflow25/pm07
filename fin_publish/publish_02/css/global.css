@@ -19,12 +19,12 @@ a{
 }
 
 @media screen and (min-width: 1280px){
-
+    header>div,
+    .contentArea{
+        max-width: 1170px; margin: 0 auto;
+    }
     header{
         border-bottom: 1px solid #f0f2f7; background-color: #fff;
-    }
-    header>div{
-        max-width: 1170px; margin: 0 auto;
     }
     header>div::after{
         content: ''; display: block; clear: both;
@@ -81,4 +81,35 @@ a{
         letter-spacing: 1px; margin-left: 25px; font-family: inherit;
     }
     /* header Fin */
+
+    .paging{
+        position: relative; background-color: #fff; border-radius: 5px;
+    }
+    .paging>a{
+        position: absolute; top: 0; text-align: center; width: 16.66%; line-height: 90px;
+        font-size: 18px; font-weight: 600; color: #3a405b;
+    }
+    .paing>a:first-of-type{
+        left: 0;
+    }
+    .paging>a:last-of-type{
+        right: 0;
+    }
+    .paging ol{
+        text-align: center; padding: 20px 17%; box-sizing: border-box;
+        border-width: 0px 1px; border-style: solid; border-color: #f0f2f7;
+    }
+    .paging ol li{
+        display: inline-block;
+    }
+    .paging ol li a{
+        display: block; width: 50px; line-height: 50px; border-radius: 25px;
+        font-size: 14px; color: #3a405b; font-weight: 600; background-color: #fff;
+        transition: box-shadow .3s ease-out, color .3s ease-out;
+    }
+    .paging ol li a.active,
+    .paging ol li a:hover{
+        box-shadow: 0px 5px 10px 0px rgba(168, 172, 185, 0.62); color: #b9bed1;
+    }
+    /* pager Fin */
 }
