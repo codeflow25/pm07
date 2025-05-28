@@ -92,21 +92,20 @@ a{
     /* header Fin */
 
     .paging{
-        position: relative; background-color: #fff; border-radius: 5px;
+        position: relative; background-color: #fff; border-radius: 5px; clear: both;
     }
     .paging>a{
         position: absolute; top: 0; text-align: center; width: 16.66%; line-height: 90px;
         font-size: 18px; font-weight: 600; color: #3a405b;
     }
-    .paing>a:first-of-type{
-        left: 0;
+    .paging>a:first-of-type{
+        left: 0; border-right: 1px solid #f0f2f7;
     }
     .paging>a:last-of-type{
-        right: 0;
+        right: 0; border-left: 1px solid #f0f2f7;
     }
     .paging ol{
         text-align: center; padding: 20px 17%; box-sizing: border-box;
-        border-width: 0px 1px; border-style: solid; border-color: #f0f2f7;
     }
     .paging ol li{
         display: inline-block;

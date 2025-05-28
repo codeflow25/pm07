@@ -155,4 +155,11 @@
         text-align: right;
     }
     /* sortBar Fin */
+
+    .contentArea aside{
+        width: 23%; float: left;
+    }
+    .contentArea section{
+        width: 75%; margin-left: 2%; float: left;
+    }
 }
