@@ -192,17 +192,17 @@
         background-color: #fff; border-radius: 5px;
     }
     .contentArea aside fieldset:not(:last-of-type){
-        margin-bottom: 30px; padding: 58px 0 20px;
+        margin-bottom: 10px; padding: 56px 0 20px;
     }
     .contentArea aside fieldset:last-of-type{
-        padding-top: 36.5px;
+        padding-top: 36px;
     }
     .contentArea aside fieldset legend{
         font-size: 11px; font-weight: 700; color: #343e5c; padding: 0 7.4% 20px; border-bottom: 1px solid #f0f2f7;
-        box-sizing: border-box; position: relative; width: 100%; top: 36.5px;
+        box-sizing: border-box; position: relative; width: 100%; top: 36px;
     }
     .contentArea aside fieldset legend a{
-        color: #2754eb; border-bottom: 2px solid #d7dcfa; float: right;
+        color: #2754eb; font-weight: 500; border-bottom: 2px solid #d7dcfa; float: right;
     }
     .contentArea aside fieldset label{
         font-size: 13px; font-weight: 500; color: #343e5c; display: inline-block;
@@ -229,7 +229,26 @@
     .contentArea aside fieldset label[for*='dlvr']:last-of-type{
         border-left: 1px solid #f0f2f7;
     }
+    .contentArea aside fieldset input[type='radio']+label:not([for*='dlvr']){
+        background: url('../images/off_radio.png') no-repeat 9.17% center;
+    }
+    .contentArea aside fieldset input[type='radio']+label[for*='dlvr']{
+        background: url('../images/off_radio.png') no-repeat 13.63% center;
+    }
+    .contentArea aside fieldset input[type='radio']:checked+label{
+        background-image: url('../images/on_radio.png');
+    }
+    .contentArea aside fieldset input[type='checkbox']+label[for*='brand']{
+        background: url('../images/off_check.png') no-repeat 9.17% center;
+    }
+    .contentArea aside fieldset input[type='checkbox']+label[for*='condition']{
+        background: url('../images/off_check.png') no-repeat 7.43% center;
+    }
+    .contentArea aside fieldset input[type='checkbox']:checked+label{
+        background-image: url('../images/on_check.png');
+    }
     .contentArea section{
         width: 75%; margin-left: 2%; float: left;
     }
+    /* aside Fin */
 }
