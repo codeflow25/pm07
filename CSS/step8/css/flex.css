@@ -1,0 +1,134 @@
+/* 
+    기본
+    display: flex;
+    ! 부모 요소는 flex 혹은 inline-flex 로 지정돼야 한다.
+    ? flex = 부모 요소가 block 으로 배치돼야 할 때, inline-flex = 부모요소가 inline-block 으로 배치돼야 할 때
+    * 그러면 자동으로 이하 자식요소는 모두 flexItem 이 된다.
+*/
+
+.flexContainer{
+    background-color: #a4a4a4; border-radius: 25px; margin: 10px; padding: 15px;
+    display: flex;
+}
+.flexContainer .flexItem{
+    margin: 10px; padding: 20px; color: #fff; background-color: #000; text-align: center;
+    border-radius: 25px;
+}
+
+.flexContainer.test{
+    width: 48%; display: inline-flex; box-sizing: border-box;
+}
+
+.flexContainer.direction{
+    flex-direction: column-reverse;
+    /* 
+        flex-direction: (default: row)
+        flex-direction 속성은 flexContainer의 주축(main axis) 방향을 설정한다.
+
+        row(ltr), row-reverse(rtl), column(TopToBottom), column(BottomToTop)
+    */
+}
+.flexContainer.wrap{
+    flex-wrap: wrap-reverse;
+    /* 
+        flex-wrap : (default: nowrap)
+        flex-wrap 속성은 flxContainer의 width보다 flexItem들의 width 합계가 큰 경우 
+        한 줄로 나오게 할것인지 여러줄로 나오게 할 것인지 결정
+
+        nowrap(1행 모두배치. flexItem width 가능한 범위까지 자동축소)
+        wrap(width 초과시 개행) - item width 설정시 %, max, min, px 설정 하여 원하는 타이밍 설정 필요
+        wrap-reverse(역배치 개행)
+    */
+}
+.flexContainer.wrap .flexItem{
+    width: 500px;
+}
+
+.flexContainer.flow{
+    flex-flow: row-reverse wrap-reverse; background-color: lightgreen;
+    /* 
+        flex-flow: <flex-direction> | <flex-wrap>;
+        direction, wrap을 줄여 쓸 수 있다. (shorthand)
+    */
+}
+.flexContainer.flow .flexItem{
+    width: 33.33%; max-width: 500px; min-width: 300px;
+}
+
+.flexContainer.justifyContent{
+    background-color: lightskyblue;
+    justify-content: space-around;
+    flex-direction: column;
+    /* 
+        justify-content (default : xAxis/flex-start)
+        flexContainer의 main axis를 기준으로 flexItem을 수평(direction: row) 정렬한다.
+
+        flex-start(flexItem을 좌측 기준 정렬)
+        flex-end(flexItem을 우측 기준 정렬)
+        center(flexItem을 가운데 기준 정렬)
+
+        space-between(flexItem중 처음은 좌측, 마지막은 우측, 나머지는 중앙 기준 동일 간격)
+        space-evenly(여유 공간을 flexItem 사이의 공간 및 시작, 끝선과 flexitem 간의 공간에 모두 균등 배분)
+        space-around(양쪽 끝 여유 공간을 두고 flexItem 사이 간격 균일하게 적용. 여유공간은 flexItem 사이 간격/2)
+    */
+}
+.flexContainer.alignContent{
+    background-color: orange; flex-wrap: wrap; height: 400px;
+    align-content: space-evenly;
+    justify-content: space-between;
+
+    /* 
+        align-content (default : yAxis/stretch)
+        flexContainer의 crossAxis를 기준으로 flexItem을 수직(direction: row) 정렬한다.
+
+        stretch: flexItem을 부모높이 기준으로 늘린다.
+        flex-start: flexItem을 부모 높이 기준 위로
+        flex-end: flexItem을 부모 높이 기준 아래로
+        center: flexItem을 부모 높이 기준 중앙으로
+
+        space-between(flexItem중 처음은 상측, 마지막은 하측, 나머지는 중앙 기준 동일 간격)
+        space-evenly(여유 공간을 flexitems 사이의 공간 및 시작, 끝선과 flexitem간의 공간에 모두 균등 배분)
+        space-around(양쪽 끝 여유 공간을 두고 flexItem 사이 간격 균일하게 적용. 여유공간은 flexItem 사이 간격/2)
+    */
+}
+.flexContainer.alignContent .flexItem{
+    width: 33.33%; max-width: 500px; min-width: 300px;
+}
+.flexContainer.justifyItems{
+    background-color: lightyellow; width: 300px;
+    display: grid;
+    justify-items: flex-end;
+}
+.flexContainer.justifyItems:hover{
+    justify-items: flex-start;
+}
+/* 
+    justify-items : (default: stretch)
+    * flexItems - parentWidth 기준으로 수평방향 정렬
+    * justify-items 속성은 모든 flexItem에 적용된다.
+
+    ! space 3형제 사용 불가(부모가 기준이 되어주는 속성이기 때문)
+    * flex-start / flex-end / center / stretch
+*/
+
+.flexContainer.alignItems{
+    align-items: baseline;
+    background-color: darkorchid;
+}
+.flexContainer.alignItems:hover{
+    align-items: flex-start;
+}
+.flexContainer.alignItems .flexItem:first-of-type{
+    line-height: 50px;
+}
+.flexContainer.alignItems .flexItem:nth-of-type(2){
+    line-height: 100px;
+}
+/* 
+    align-items : (default: stretch)
+    * flexItems - items(H/higher) 기준으로 수직방향 정렬.
+    * align-items 속성은 모든 flexitem에 적용된다.
+
+    ! space 3형제 사용 불가(부모가 기준이 되어주는 속성이기 때문)
+    * flex-start / flex-end / center / stretch / baseline
+*/
