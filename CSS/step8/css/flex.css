@@ -176,17 +176,19 @@
 
 .flexContainer.flexShortHand{
     width: 50%; margin: 0; padding: 0; 
-    /* max-width: 300px; */
+    max-width: 300px;
 }
 .flexContainer.flexShortHand .flexItem{
-    margin: 0; padding: 0;
+    margin: 0; padding: 0; word-break: break-all;
 }
 
 .flexContainer.flexShortHand .flexItem:first-child{
-    flex-grow: 2; flex-basis: 0;
+    /* flex-grow: 2; flex-basis: 0; */
+    flex-basis: 150px; flex-shrink: 2;
 }
 .flexContainer.flexShortHand .flexItem:first-child~*{
-    flex-grow: 1; flex-basis: 0;
+    /* flex-grow: 1; flex-basis: 0; */
+    flex-basis: 150px; flex-shrink: 1;
 }
 
 /* 
@@ -206,12 +208,12 @@
     ! 기준되는 부모가 줄어들 때 각 item들의 수축비를 정한다. default : 1.
     ! 음수 비허용. 양수 입력시 '총 수축 내부수축지수(shrink합산)의 너비중 입력된 비율만큼 수축될 수 있다.
     ! 단, min-width가 설정되면 해당 수치 이하로 줄어들 수 없다.
-    * 해당 items의 basis값 - (parent의 부족한 width / 총 flex-shrink 값) * 각 items의 shrink 값 / basis 미기재는 적용X
+    * 해당 items의 basis값 - (parent의 부족한 width / 총 flex-shrink 값) * 각 items의 shrink 값 // basis 미기재는 적용X
 
     ?ex.2 > 만약 수축중인 부모너비가 300px인 item 3개(각너비는 150px)의 수축비는?
     todo. .flexItem:first-of-type{flex-shrink:2;}-> auto -(150/4)*2= // basis 미기재로 불가능.
     todo. .flexItem:first-of-type{flex-shrink:2;}-> 150(basis) - (150/4)*2=  75.
-    todo. .flexItem:first-of-type~*{flex-shrink:1;}-> 150(basis) - (150/4)*1= 112.5.
+    todo. .flexItem:first-of-type~*{flex-shrink:1;}-> 150(basis) - (150/4)*1= 112.5
 
     basis:
     ! item의 너비를 정한다. 기본값은 auto 이며 다양한 단위 percentages(%) || ems || rems || pixels 를 사용 할 수있다.
@@ -232,7 +234,7 @@
     flex-grow: 1; flex-shrink: 1; 상태가 된다.
 
     flex: <flex-grow> | <flex-shrink>
-    flex-basis: 0; 상태가 된다. - 아니..shrink가 작동 하려면 basis가 제한값이 되야 하는데.. 0이라고? = max-width설정이 필요하구나!
+    flex-basis: 0; 상태가 된다.
 
     flex: <flex-grow> | <flex-basis>
     flex-shrink: 1; 상태가 된다.
