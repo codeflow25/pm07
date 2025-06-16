@@ -11,3 +11,31 @@
     ? 명시적 형변환
     * method 나 lib Core func를 이용하여 강제로 숫자 -> 문자 로 변환.
 */
+
+// case.1 자신의 나이를 입력받고 20을 더한 값 출력
+function agePlus(){
+    var age = Number(prompt("현재 나이를 입력하시오."));
+    var result = age + 20;
+    console.log(typeof(age));
+    console.log(result);
+}
+
+// case.2 강제 숫자 - 문자 형변환
+function forcedString(){
+    var a = '30';
+    var result = 1 + a + 20;
+    console.log('result 변수의 최종 자료형은 ' + typeof(result) + ', 담긴 값은 ' + result + '입니다.');
+}
+
+// case.3 강제 불린 - 숫자 형변환
+function forcedNumber(){
+    var result = 2 + true;
+    console.log('result 변수의 최종 자료형은 ' + typeof(result) + ', 담긴 값은 ' + result + '입니다.');
+}
+
+// case.4 강제 불린 - 문자 형변환
+function forcedString2(){
+    var a = '2';
+    var result = a + true;
+    console.log('result 변수의 최종 자료형은 ' + typeof(result) + ', 담긴 값은 ' + result + '입니다.');
+}
