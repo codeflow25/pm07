@@ -1,4 +1,9 @@
 function callAlert(){
     alert('hi');
 }
-document.write('hello');
+function callWrite(){
+    document.write('hello');
+}
+function callLog(){
+    console.log('hi hello...!');
+}
