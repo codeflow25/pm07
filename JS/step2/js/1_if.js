@@ -137,3 +137,49 @@ function lotto(){
         alert('낙첨되었습니다.');
     }
 }
+
+// todo.2 다음 코드를 실행해 본 후 간소화 하기
+function btnMouseEx(){
+    var clickBtn = window.prompt('누르실 마우스 버튼을 입력하세요 (왼쪽, 오른쪽, 가운데)');
+    // if 1개, else 1개
+    // if(clickBtn=='오른쪽'){
+    //     console.log("오른쪽!");
+    // }else if(clickBtn == '왼쪽'){
+    //     console.log('왼쪽!');
+    // }else if(clickBtn == '가운데'){
+    //     console.log('가운데!');
+    // }else{
+    //     console.log('올바른 값을 입력하세요.');
+    // }
+    if(clickBtn == "오른쪽" || clickBtn =="왼쪽" || clickBtn == "가운데"){
+        console.log(clickBtn + "!");
+    }else{
+        console.log('올바른 값을 입력하세요.');
+    }
+}
+
+// todo.3 다음 세 과목의 점수를 prompt로 입력받고 평균을 구한 뒤(소수점은 두자리에서 끊기) 수, 우, 미, 양, 가 등급 나누기
+function avgScore(){
+    var koreanScore = Number(prompt(" 국어점수를 입력하세요."));
+    var englishScore = Number(prompt(" 영어점수를 입력하세요."));
+    var mathScore = Number(prompt(" 수학점수를 입력하세요."));
+
+    var avg = ((koreanScore + englishScore + mathScore)/3).toFixed(2);
+    
+    if(avg > 100 || avg < 0){
+        console.log('점수 오류 입니다. 올바른 값을 입력하세요.');
+    }else if(avg >= 90){
+        console.log("평균 " + avg + "점 '수'");
+    }else if(avg >= 80){
+        console.log("평균 " + avg + "점 '우'");
+    }else if(avg >= 70){
+        console.log("평균 " + avg + "점 '미'");
+    }else if(avg >= 60){
+        console.log("평균 " + avg + "점 '우'");
+    }else if(avg >= 50){
+        console.log("평균 " + avg + "점 '가'");
+    }else{
+        console.log("잘못된 값입니다.");
+    }
+}
+// 수 - 90점 이상 / 우 - 89점 이하 / 미 - 79점 이하 / 양 - 69점 이하 / 가 - 59점 이하
