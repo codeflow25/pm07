@@ -133,7 +133,14 @@ function continueEx(){
 // todo. 과제 continue를 활용하여 1~10까지 값을 구하지만 짝수들만 더해서 출력하기
 // ! 2, 6, 12, 20, 30만 출력돼야 함
 function todoContinue(){
-    
+    var output = 0;
+    for(var i=1; i<=10; i++){
+        if(i%2==1){
+            continue;
+        }
+        output += i;
+        console.log(output);
+    }
 }
 
 // case.6 for에서의 break
@@ -143,4 +150,69 @@ function forBreak(){
         document.write(i + '<br>');
     }
     document.write("최종 i = " + i + "<br>");
+}
+function breakEx(){
+    var i=0;
+    while(i < 100){
+        if(i == 3){
+            break;
+        }
+        i+=1;
+    }
+    console.log(i);
+}
+function runBreak(){
+    for(var i=0; true; i++){
+        alert(i + "번째 반복문");
+        if(!confirm("계속진행?")){
+            break;
+        }
+    }
+}
+/* 
+    confirm = 확인, 취소 == true, false
+    if(confirm) == 만약에 확인(true)이면 ~~
+    if(!confirm) == 만약에 취소(false)이면 ~~
+    ? 계속진행 했을때 확인(true)을 클릭하게 되면 break가 걸리니, 취소(false)일 때 break가 걸리게끔 설정
+*/
+
+// todo. 배열값을 변화시키면 자동으로 반응하는 경고창 만들기.
+function runBreak2(){
+    var swapNumb = ['첫','두','세','네','다섯','여섯'];
+    for(var i=0; true; i++){
+        console.log(swapNumb[i]+"번째 반복문");
+        if(i == swapNumb.length -1){
+            break;
+        }
+    }
+    document.write('지정된 배열값 : ' + swapNumb.length + '개. 출력 완료' + "<br>");
+}
+
+// case.1 반절 피라미드
+function halfPyramid(){
+    var star='';
+    for(var i=1; i<=10; i++){
+        for(var j=0; j<i; j++){
+            star += '*';
+        }
+        star += "<br>";
+    }
+    document.write(star);
+}
+// case.2 역반절 피라미드
+function reverseHalfPyramid(){
+    var star ='';
+    for(var i= 10; i>=1; i--){
+        for(var j=0; j<i; j++){
+            star +='*';
+        }
+        star += '<br>';
+    }
+    document.write(star);
+}
+
+// todo. 완성형 피라미드(두개의 상황 응용)
+function pyramid(){
+    var star ='';
+    // '&nbsp;'
 }
