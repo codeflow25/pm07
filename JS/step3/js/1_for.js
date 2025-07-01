@@ -214,5 +214,14 @@ function reverseHalfPyramid(){
 // todo. 완성형 피라미드(두개의 상황 응용)
 function pyramid(){
     var star ='';
-    // '&nbsp;'
+    for(var i=1; i<=10; i++){  // 가장 마지막 실행 : 줄바꿈
+        for(var j=10; j>=i; j--){
+            star += "&nbsp";
+        }
+        for(var c=0; c<2*i-1; c++){
+            star += '*';
+        }
+        star += "<br>";
+    }
+    document.write(star);
 }
