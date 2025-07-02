@@ -201,3 +201,14 @@ function execute(func){
 function welcome(){
     alert("환영합니다. 고객님");
 }
+$(document).ready(function(){
+    $("#case10").click(welcome);
+});
+// case.11 return value로 함수를 전달하기
+function createHello(){
+    function hello2(user){
+        document.write(user + "welcome!");
+    }
+    return hello2;
+}
+var result = createHello();
