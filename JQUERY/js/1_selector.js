@@ -2,6 +2,7 @@ $(document).ready(function(){
     case1Test();
     $("#btnCheck").click(sayHello);
     $("#btnAddBorder").click(addBorder);
+    $('#btnTextChange').click(textChange);
 });
 function case1Test(){
     var $divs = $("div");
@@ -12,4 +13,11 @@ function sayHello(){
 }
 function addBorder(){
     $(".panel").css("border","10px solid green");
+}
+function textChange(){
+    $("#panel2").css({
+        "font-size": "25px",
+        "font-weight" : "black",
+        "color" : "lightblue"
+    });
 }
