@@ -52,24 +52,39 @@ function keyControl(){
 
     $(document).keydown(function(e){
         console.log("현재 입력한 키는 : " + typeof(e.keyCode) + e.keyCode);
-        // 위(Ypos -): 38, 오른쪽(Xpos +): 39, 아래(Ypos +): 40, 왼쪽(Xpos -): 37
+        // 위(Ypos -): 87, 오른쪽(Xpos +): 68, 아래(Ypos +): 83, 왼쪽(Xpos -): 65
         switch(e.keyCode){
-            case 38:
+            case 87:
                 currentYpos -= range;
                 break;
-            case 39:
+            case 68:
                 currentXpos += range;
                 break;
-            case 40:
+            case 83:
                 currentYpos += range;
                 break;
-            case 37:
+            case 65:
                 currentXpos -= range;
-                break;
-            default:
-                alert('올바른 방향키가 아닙니다.');
                 break;
         }
         // 과제 조건 : x, y가 0보다 작을때, x, y과 380보다 클 때 좌표처리하기.
+        if(currentXpos <= 0){
+            currentXpos = 0;
+        }
+        if(currentXpos >= 380){
+            currentXpos = 380;
+        }
+        if(currentYpos <= 0){
+            currentYpos = 0;
+        }
+        if(currentYpos >= 380){
+            currentYpos = 380;
+        }
+
+        $circle.css({
+            "left" : currentXpos,
+            "top" : currentYpos
+        });
+
     });
 }
