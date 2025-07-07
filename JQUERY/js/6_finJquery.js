@@ -8,3 +8,34 @@
     
     3. 결과 처리 - 정렬함수를 만들어 비교하고 배열내 값을 내림차순으로 정렬 하여 배열 0번에 위치한 물고기가 1등이 될 수 있도록-
 */
+
+var $fishList = null;
+var timerID = -1;
+var $info = null;
+var goalLine = 0;
+var $fishWidth = 0;
+// 변수 선언 및 초기화 작업
+
+$(function(){
+    init();
+    fishStartPosition();
+})
+
+function init(){
+    $fishList = $(".fish");
+    $info = $("#info");
+    $fishWidth = $(".fish img").width();
+    goalLine = $("#bar").position().left - $fishWidth;
+    console.log("1. 대상 선언 및 초기화 완료");
+}
+
+function fishStartPosition(){
+    for(var i=0; i<$fishList.length; i++){
+        var $fish = $fishList.eq(i);
+        $fish.css({
+            left: 0,
+            top: 100 + (i*150)
+        });
+    }
+    console.log("2. 초기 위치 설정 완료");
+}
