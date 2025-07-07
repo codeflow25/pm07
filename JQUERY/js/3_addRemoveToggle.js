@@ -2,6 +2,7 @@ $(document).ready(function(){
     toggleCheck();
     toggleTodo();
     tabUI(".tabMenu li",".tabPage");
+    accControl(".accComponent li h3");
 });
 
 function toggleCheck(){
@@ -48,3 +49,8 @@ function tabUI(clicker,target){
 }
 
 // 과제 accControl toggle event(.toggleClass 사용)
+function accControl(target){
+    $(target).click(function(){
+        $(this).toggleClass('active');
+    });
+}
