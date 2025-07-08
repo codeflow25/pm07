@@ -19,6 +19,7 @@ var $fishWidth = 0;
 $(function(){
     init();
     fishStartPosition();
+    fishEvent();
 })
 
 function init(){
@@ -38,4 +39,68 @@ function fishStartPosition(){
         });
     }
     console.log("2. 초기 위치 설정 완료");
+}
+function fishEvent(){
+    $("#start").click(startGame);
+    console.log("3. 게임 시작 함수 불러오기 성공");
+}
+function startGame(){
+    if(timerID == -1){
+        timerID = setInterval(function(){
+            updateFishPosition(); // 물고기움직임
+            displayFishPositionInfo(); // 움직인 물고기 위치표시
+            checkGoalFish(); // 결승전 도달감지
+        }, 200);
+        console.log("4 게임 정상 시작");
+    }
+}
+function updateFishPosition(){
+    for(var i=0; i<$fishList.length; i++){
+        var $fish = $fishList.eq(i);
+        var step = Math.ceil(Math.random()*30);
+        /*
+            Math.ceil : 입력값이 실수일 때 올림처리 ex) 9.4 -> 10
+            Math.floor : 입력값이 실수일 때 내림 처리 ex) 9.7 -> 9
+            random : 반환값 0 - 1 사이의 소수 값
+        */
+       var newLeft = $fish.position().left + step;
+       $fish.css("left",newLeft);
+    }
+    console.log('물고기 움직임 정상');
+}
+function displayFishPositionInfo(){
+    var info = '';
+    for(var i=0; i < $fishList.length; i++){
+        var $fish = $fishList.eq(i);
+        info += i+"번 물고기 : " + $fish.position().left.toFixed(2) + "px <br>";
+    }
+    $info.html(info);
+    console.log("6. 물고기 위치 표시 정상");
+}
+function checkGoalFish(){
+    var winnerList = [];
+    for(var i=0; i<$fishList.length; i++){
+        var fishCurrentPosition = $fishList.eq(i).position().left;
+        if(fishCurrentPosition >= goalLine){
+            winnerList.push({
+                index: (i), position: fishCurrentPosition
+            });
+            console.log("7. 데이터 저장 성공");
+        }
+    }
+    if(winnerList.length>0){
+        winnerList.sort(function(a,b){
+            return b.position - a.position;
+            // 내림차순 - (4, 3, 2, 1)
+            // 오름차순 - (1, 2, 3, 4)
+        });
+        endGame(); // 게임종료
+        console.log("8. 우승 물고기 선별 완료");
+        alert("우승!" + winnerList[0].index + "번 물고기")
+    }
+}
+function endGame(){
+    clearInterval(timerID);
+    timerID = -1;
+    console.log("게임 종료.");
 }
