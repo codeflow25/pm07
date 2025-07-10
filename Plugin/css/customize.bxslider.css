@@ -5,7 +5,7 @@
 .newPager .bx-pager.bx-default-pager .bx-pager-item{
     display: inline-block;
 }
-.newPager .bx-pager.bx-default-pager .bx-pagere-item:not(:firs-to-ftype){
+.newPager .bx-pager.bx-default-pager .bx-pager-item:not(:first-of-type){
     margin-left: 2%;
 }
 .newPager .bx-pager.bx-default-pager .bx-pager-item a.bx-pager-link{
