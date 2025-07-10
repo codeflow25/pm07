@@ -16,5 +16,17 @@ $(document).ready(function(){
         // *adaptiveHeight
         adaptiveHeight: true, //? default : false. slide content높이에 따라 frame이 적응형으로 변환.
         adaptiveHeightSpeed: 500, //? default : 500. adaptiveHeight 작동속도. 특이사항없으면 speed 동기화
+
+        easing: 'ease-out', //? default : null. slide간 전환 가속도 설정. CSS timing-function option 사용가능.
+        captions: true, //? default: false. img's에 title attr을 부여하면 그 부분을 이미지 위로 보여준다.
+        video: true, //! default : false. video 종횡비활성화(slide에 video가 있을 때만!!)
+        responsive: true, //? default: true. slider 자체 반응형 켜기.
+
+        // *pager - indicator
+        pager: true, //? default: true. pager 켜기/끄기
+        pagerType: 'full', //? default: full-circle, short-count
+        //? pagerShortSeparator: '/'  default: / -> . 식별자변경.
+        pagerSelector: '.newPager', //default: ''. 공간 생성 및 class 부여 하면 pager 뼈대제공.
+        // pagerCustom: '.customPager', //? default: null. pager 구조 직접 작성 및 data-slide-index="i"를 설정하면 원하는 style의 pager 구현가능.
     });
 });
